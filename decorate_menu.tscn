@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1ugpoiu1yxhi"]
+[gd_scene load_steps=4 format=3 uid="uid://b1ugpoiu1yxhi"]
 
+[ext_resource type="Script" uid="uid://d2gvgywp2kmmb" path="res://decorate_menu.gd" id="1_2pxhd"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="1_x4i3i"]
+[ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="3_vcb5d"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchor_bottom = 1.0
 offset_left = 498.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2pxhd")
 
 [node name="colorRects" type="Node2D" parent="."]
 
@@ -37,14 +40,14 @@ color = Color(0.71500194, 0.7006772, 0.7169054, 1)
 offset_left = 344.0
 offset_top = 13.0
 offset_right = 492.0
-offset_bottom = 209.0
+offset_bottom = 79.0
 color = Color(0.71500194, 0.7006772, 0.7169054, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 11.0
-offset_right = 491.0
+offset_right = 333.0
 offset_bottom = 131.0
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer"]
@@ -60,3 +63,15 @@ offset_right = 174.0
 offset_bottom = 206.0
 size_flags_horizontal = 3
 text = "$800"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 21.0
+offset_right = 487.0
+offset_bottom = 72.0
+theme = ExtResource("3_vcb5d")
+theme_override_font_sizes/normal_font_size = 25
+text = "Coins: 0"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
