@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2p2ukiycl6rt"]
+
+[ext_resource type="Script" uid="uid://dlqm11pjtyxxn" path="res://hotel_outside.gd" id="1_g7t26"]
+[ext_resource type="Texture2D" uid="uid://b4t3txh7jas1r" path="res://assets/hotel inside.png" id="1_i0lhx"]
+
+[node name="hotel_outside" type="Node2D"]
+script = ExtResource("1_g7t26")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(500, 299)
+scale = Vector2(2, 2.0066667)
+texture = ExtResource("1_i0lhx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -10,7 +10,7 @@ func _process(_float) -> void:
 
 
 func _on_exit_pressed() -> void:
-	pass 
+	get_tree().change_scene_to_file("res://hotel_outside.tscn")
 
 
 func _on_button_2_pressed() -> void: #bookshelf purchase

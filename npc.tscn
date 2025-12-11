@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg073kbc5nndy"]
+
+[ext_resource type="Texture2D" uid="uid://bnw1626k40nkg" path="res://assets/bunny.PNG" id="1_xxcha"]
+[ext_resource type="Script" uid="uid://bmor5803cbowm" path="res://sprite_2d_2.gd" id="2_kh24r"]
+
+[node name="npc" type="Sprite2D"]
+position = Vector2(105, 482)
+scale = Vector2(1.235, 1.3534031)
+texture = ExtResource("1_xxcha")
+script = ExtResource("2_kh24r")
