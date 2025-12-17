@@ -1,5 +1,4 @@
 extends Sprite2D
-@onready var timer = $Timer
 var pos = Vector2(508,443)
 
 func _process(delta):

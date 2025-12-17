@@ -8,3 +8,5 @@ var tutorial:bool = true
 var bought_bed:bool = false
 var bought_bookshelf: bool = false
 var bought_sign: bool = false
+var advertisement = int(0)
+var customers = int(0)

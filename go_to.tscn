@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnkoxifi4xu0c"]
+
+[ext_resource type="Script" uid="uid://ddmqdl5txsnnb" path="res://go_to.gd" id="1_mew4y"]
+[ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="1_vvker"]
+
+[node name="go_to" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mew4y")
+metadata/_edit_use_anchors_ = true
+
+[node name="decorate" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -300.0
+offset_right = -241.0
+offset_bottom = -184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vvker")
+theme_override_font_sizes/font_size = 27
+text = "Decorate Rooms"
+metadata/_edit_use_anchors_ = true
+
+[node name="inside" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 241.0
+offset_top = -300.0
+offset_right = 500.0
+offset_bottom = -184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vvker")
+theme_override_font_sizes/font_size = 27
+text = "Inside Hotel"
+metadata/_edit_use_anchors_ = true
+
+[node name="advertise" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 241.0
+offset_top = 184.0
+offset_right = 500.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vvker")
+theme_override_font_sizes/font_size = 27
+text = "Advertise Hotel"
+
+[connection signal="pressed" from="decorate" to="." method="_on_decorate_pressed"]
+[connection signal="pressed" from="inside" to="." method="_on_inside_pressed"]
+[connection signal="pressed" from="advertise" to="." method="_on_advertise_pressed"]
