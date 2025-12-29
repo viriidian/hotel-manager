@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cjucl7flgcjf0"
+path="res://.godot/imported/1star_review_pt2.dialogue-4005683541b35bfc4be378a2f5db92bb.tres"
+
+[deps]
+
+source_file="res://1star_review_pt2.dialogue"
+dest_files=["res://.godot/imported/1star_review_pt2.dialogue-4005683541b35bfc4be378a2f5db92bb.tres"]
+
+[params]
+
+defaults=true

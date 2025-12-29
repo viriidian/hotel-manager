@@ -21,3 +21,10 @@ var room5_full := false
 var room6_full := false
 var played_tutorial := false
 var review = 0
+var checkoutside := false
+var advertisement_multiplier := 1
+func _process(_float) -> void:
+	if checkoutside:
+		get_tree().change_scene_to_file("res://hotel_intro.tscn")
+func to_hotel_outside():
+	get_tree().change_scene_to_file("res://hotel_outside.tscn")

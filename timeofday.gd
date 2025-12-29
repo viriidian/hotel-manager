@@ -2,7 +2,7 @@ extends Control
 var day = int()
 var hour = int()
 var minute = int()
-var time_scale = 20
+var time_scale = 16.7
 var day_ = 0
 var center_position
 @onready var review_menu_preload = preload("res://day_end.tscn")

@@ -6,6 +6,7 @@ extends Control
 @onready var s4 = $star4
 @onready var s5 = $star5
 @onready var animation = $AnimationPlayer
+@onready var dialogue = preload("res://1star_review.dialogue")
 func _ready():
 	s1.hide()
 	s2.hide()
@@ -32,3 +33,4 @@ func _ready():
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free()
+	DialogueManager.show_dialogue_balloon(dialogue, "start")

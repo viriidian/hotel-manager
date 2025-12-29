@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://utuhs7tvmldq"
+path="res://.godot/imported/1star_review.dialogue-56723a5145067491c31059eca38ef0ca.tres"
+
+[deps]
+
+source_file="res://1star_review.dialogue"
+dest_files=["res://.godot/imported/1star_review.dialogue-56723a5145067491c31059eca38ef0ca.tres"]
+
+[params]
+
+defaults=true

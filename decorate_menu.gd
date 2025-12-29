@@ -17,14 +17,14 @@ func _on_exit_pressed() -> void:
 
 func _on_button_2_pressed() -> void: #bookshelf purchase
 	if e.bought_bed and not e.bought_bookshelf:
-		if e.money >= 450:
-			e.money -= 450
+		if e.money >= 1200:
+			e.money -= 1200
 			e.add_bookshelf = true
 
 func _on_button_3_pressed() -> void: #sign purchase
 	if e.bought_bed and not e.bought_sign:
-		if e.money >= 250:
-			e.money -= 250
+		if e.money >= 900:
+			e.money -= 900
 			e.add_sign = true
 
 func _ready():
