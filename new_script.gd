@@ -33,6 +33,9 @@ var paid_marketing_fees := false
 var paid_emergency_exit := false
 var bought_fire_extinguisher := false
 var add_fire_extinguisher := false
+var no_fire_extinguisher := false
+var check_for_fire_extinguisher := false
+var fire_extinguisher := false
 func fish():
 	get_tree().change_scene_to_file("res://hotel_intro.tscn")
 func to_hotel_outside():

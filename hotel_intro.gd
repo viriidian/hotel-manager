@@ -10,6 +10,7 @@ extends Node2D
 @onready var mumble = $mumble
 @onready var inspector = $inspector
 @onready var pay_emergency_exit_fine = preload("res://inspector.dialogue")
+@onready var pay_fire_extinguisher = preload("res://inspector_fire_extinguisher.dialogue")
 func _ready():
 	inspector.hide()
 	sprite.show()
@@ -40,6 +41,10 @@ func _process(_float) -> void:
 			DialogueManager.show_dialogue_balloon(pay_emergency_exit_fine, "start")
 			e.transition2_finish = false
 			e.paid_emergency_exit = true
+		elif e.no_fire_extinguisher:
+			e.no_fire_extinguisher = false
+			DialogueManager.show_dialogue_balloon(pay_fire_extinguisher, "start")
+			e.transition2_finish = false
 		else:
 			DialogueManager.show_dialogue_balloon(intro, "start")
 			e.transition2_finish = false

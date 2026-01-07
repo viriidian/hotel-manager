@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dywq6kaheir76"
+path="res://.godot/imported/inspector_fire_extinguisher.dialogue-33124e3067d894903bfcead68cb9daf7.tres"
+
+[deps]
+
+source_file="res://inspector_fire_extinguisher.dialogue"
+dest_files=["res://.godot/imported/inspector_fire_extinguisher.dialogue-33124e3067d894903bfcead68cb9daf7.tres"]
+
+[params]
+
+defaults=true

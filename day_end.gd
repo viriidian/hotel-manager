@@ -52,7 +52,7 @@ func _ready():
 	elif e.paid_owner and e.paid_marketing_fees and not e.paid_emergency_exit:
 		randomize()
 		var random_float = randf()
-		if random_float >= 0.4:
+		if random_float >= 0.5:
 			e.emergency_exit = true
 			review1_text.text = "Meet me outside"
 			s1.show()
@@ -66,6 +66,30 @@ func _ready():
 			s2.show()
 			s3.show()
 			e.review = 3
+	elif e.paid_owner and e.paid_marketing_fees and e.paid_emergency_exit and not e.bought_fire_extinguisher and not e.fire_extinguisher:
+		randomize()
+		var random_float = randf()
+		if random_float >= 0.5:
+			e.no_fire_extinguisher = true
+			e.fire_extinguisher = true
+			review1_text.text = "Me again. Meet me outside."
+			s1.show()
+			s2.show()
+			s3.show()
+			e.review = 3
+			go_hotel_intro = true
+		else:
+			review1_text.text = "Interesting."
+			s1.show()
+			s2.show()
+			s3.show()
+			e.review = 3
+	elif e.check_for_fire_extinguisher:
+		if e.bought_fire_extinguisher:
+			review1_text.text = "hey, you bought fire extinguishers! nice."
+		else:
+			review1_text.text = "you still don't have a fire extinguisher here? we're going to have to charge you for that."
+			e.money -= 300
 	elif e.amount_of_furniture > 3 and e.amount_of_furniture <= 5:
 		review1_text.text = "A pretty comfortable amount of furniture here."
 		s1.show()
@@ -88,7 +112,7 @@ func _ready():
 		review1_text.text = "theres like.. nothing here."
 		s3.show()
 		e.review = 1
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	queue_free()
 	if Timeofday.day == 1:
 		DialogueManager.show_dialogue_balloon(dialogue, "start")
